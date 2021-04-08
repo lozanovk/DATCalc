@@ -225,6 +225,9 @@
 		var originDate = new Date("1840-12-31T00:00:00");
 		var mathDate = originDate.getTime();
 		var trgtDate = new Date(trgtTime + mathDate);
+
+		var Difference_In_Time = trgtDate - originDate.getTime();
+		var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 		
 		if (instRnd == inst) {
 			visual = "";
@@ -238,8 +241,8 @@
 			document.getElementById("inst4").innerHTML = "";
 			document.getElementById("date4").innerHTML = "";
 		} else {
-			document.getElementById("dte4").innerHTML = "";//(121531 - datRnd) + visual ;
-			document.getElementById("dat4").innerHTML = "";//datRnd;
+			document.getElementById("dte4").innerHTML = Math.ceil(Difference_In_Days);
+			document.getElementById("dat4").innerHTML = 121531 - Math.ceil(Difference_In_Days);
 			document.getElementById("inst4").innerHTML = instRnd + visual;//(trgtTime/1000) + 3362;
 			document.getElementById("date4").innerHTML = trgtDate;
 		}
