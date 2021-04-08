@@ -9,15 +9,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  <link rel='stylesheet' href='css/style.css' />
  
     <title>DAT / DTE / DATE Calculator</title>
     
-   
-    <link rel='stylesheet' href='css/style.css' />
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <!--<link rel="icon" sizes="196x196" href="/images/icon.png">-->
   </head>
+
   <body>
   <!-- Optional JavaScript -->
  
@@ -25,25 +22,20 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   
-  <!--
-  <script src="javascripts/jquery-3.5.1.min.js"></script>
-  <script src="javascripts/popper.min.js"></script>
-  <script src="javascripts/bootstrap.min.js"></script>
-  -->
-  <!--
-  <script type="text/javascript" src="/javascripts/jquery.canvasjs.min.js"></script>
-  -->
 	<div id="backdrop" class="container" >
 	<br>
 	<div align="center">
 		<h1> DAT / DTE / Date Calculator</h1>
 	</div>
+
 	<br><br>
+
      <div>
 		<div class="container">
 		<div class="form-group" align="center">
 		  <div class="form-control cstm" align="center">
 			<div class="center">
+
 			  <label class="inputLabel" for="drugInput"><b>Calculate From</b></label>
 			  <select class="form-select form-select-lg mb-3" id="selType" name="type" onchange="getFocus()">
 					<option value="1">Date</option>
@@ -51,73 +43,70 @@
 					<option value="3">DTE</option>
 					<option value="4">Instant</option>
 			  </select>
+
 			</div>
 		  </div>
 		  <br><br>
 		</div>
 		</div>
-			<br>
+		<br>
 			
-			<div id="div1">
-				<div class="form-control cstm" align="center">
-					<label for="meeting-time"><strong>Date / Time:&nbsp;&nbsp;  </strong></label>
-					<input type="datetime-local" id="meeting-time"
-					name="meeting-time" value="" onchange="calcFromDateTime()">
-				</div>
-						<ul class="list-group">
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat1"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte1"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date1" class="date-sm"></span></li>
-						  <li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst1"></span></li>
-						</ul>
+		<div id="div1">
+			<div class="form-control cstm" align="center">
+				<label for="meeting-time"><strong>Date / Time:&nbsp;&nbsp;  </strong></label>
+				<input type="datetime-local" id="meeting-time"
+				name="meeting-time" value="" onchange="calcFromDateTime()">
 			</div>
+
+				<ul class="list-group">
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat1"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte1"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date1" class="date-sm"></span></li>
+					<li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst1"></span></li>
+				</ul>
+		</div>
 			
-			<div id="div2" hidden>
-				<div class="form-control cstm" align="center">
-					<label for="datVal"><strong>DAT:&nbsp;&nbsp;  </strong></label>
-					<input type="number" id="datVal"
-					name="datVal" value="" onchange="calcFromDatVal()">
-				</div>
-						<ul class="list-group">
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat2"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte2"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date2" class="date-sm"></span></li>
-						  <li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst2"></span></li>
-						</ul>
+		<div id="div2" hidden>
+			<div class="form-control cstm" align="center">
+				<label for="datVal"><strong>DAT:&nbsp;&nbsp;  </strong></label>
+				<input type="number" id="datVal"
+				name="datVal" value="" onchange="calcFromDatVal()">
 			</div>
+				<ul class="list-group">
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat2"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte2"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date2" class="date-sm"></span></li>
+					<li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst2"></span></li>
+				</ul>
+		</div>
 			
-			<div id="div3" hidden>
-				<div class="form-control cstm" align="center">
-					<label for="dteVal"><strong>DTE:&nbsp;&nbsp;  </strong></label>
-					<input type="number" id="dteVal"
-					name="dteVal" value="" onchange="calcFromDteVal()">
-				</div>
-						<ul class="list-group">
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat3"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte3"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date3" class="date-sm"></span></li>
-						  <li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst3"></span></li>
-						</ul>
-			
+		<div id="div3" hidden>
+			<div class="form-control cstm" align="center">
+				<label for="dteVal"><strong>DTE:&nbsp;&nbsp;  </strong></label>
+				<input type="number" id="dteVal"
+				name="dteVal" value="" onchange="calcFromDteVal()">
 			</div>
+				<ul class="list-group">
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat3"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte3"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date3" class="date-sm"></span></li>
+					<li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst3"></span></li>
+				</ul>
+		</div>
 			
-			<div id="div4" hidden>
-				<div class="form-control cstm" align="center">
-					<label for="instVal"><strong>Instant:&nbsp;&nbsp;  </strong></label>
-					<input type="number" id="instVal"
-					name="instVal" value="" onchange="calcFromInstVal()">
-				</div>
-						<ul class="list-group">
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat4"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte4"></span></li>
-						  <li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date4" class="date-sm"></span></li>
-						  <li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst4"></span></li>
-						</ul>
-			
+		<div id="div4" hidden>
+			<div class="form-control cstm" align="center">
+				<label for="instVal"><strong>Instant:&nbsp;&nbsp;  </strong></label>
+				<input type="number" id="instVal"
+				name="instVal" value="" onchange="calcFromInstVal()">
 			</div>
-			
-			
-			
+				<ul class="list-group">
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DAT:&nbsp;&nbsp;</b><span id="dat4"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;&nbsp;DTE:&nbsp;&nbsp;</b><span id="dte4"></span></li>
+					<li class="list-group-item"><b>&nbsp;&nbsp;&nbsp;Date:&nbsp;&nbsp;</b><span id="date4" class="date-sm"></span></li>
+					<li class="list-group-item"><b>Instant:&nbsp;&nbsp;</b><span id="inst4"></span></li>
+				</ul>
+		</div>				
 	</div>
 	</div>
   </body>
@@ -153,15 +142,10 @@
 	function calcFromDateTime() {
 		var dateTime = document.getElementById("meeting-time").value;
 		var inputDate = new Date(dateTime);
-		var originDate = new Date("1840-12-31T00:00:00");
-		console.log(dateTime);
-		console.log(inputDate);
-		console.log(originDate);
-	
+		var originDate = new Date("1840-12-31T00:00:00");	
 		var Difference_In_Time = inputDate.getTime() - originDate.getTime();
 		var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 		  
-		
 		if (isNaN(Difference_In_Days)){
 			document.getElementById("dte1").innerHTML = "";
 			document.getElementById("dat1").innerHTML = "";
@@ -181,7 +165,6 @@
 		var visual = "";
 		var originDate = new Date("1840-12-31T00:00:00");
 		var mathDate = originDate.getTime();
-		console.log(originDate);
 		
 		if (datRnd == dat) {
 			visual = "";
@@ -201,7 +184,6 @@
 			document.getElementById("dat2").innerHTML = datRnd + visual;
 			document.getElementById("inst2").innerHTML = (trgtTime/1000) + 3362;
 			document.getElementById("date2").innerHTML = trgtDate;
-			console.log(mathDate + datRnd);
 		}
 	};
 	
@@ -213,7 +195,6 @@
 		var visual = "";
 		var originDate = new Date("1840-12-31T00:00:00");
 		var mathDate = originDate.getTime();
-		console.log(originDate);
 		
 		if (dteRnd == dte) {
 			visual = "";
@@ -233,7 +214,6 @@
 			document.getElementById("dat3").innerHTML = datRnd;
 			document.getElementById("inst3").innerHTML = (trgtTime/1000) + 3362;
 			document.getElementById("date3").innerHTML = trgtDate;
-			console.log(mathDate + datRnd);
 		}
 	};
 	
@@ -245,7 +225,6 @@
 		var originDate = new Date("1840-12-31T00:00:00");
 		var mathDate = originDate.getTime();
 		var trgtDate = new Date(trgtTime + mathDate);
-		console.log(trgtDate);
 		
 		if (instRnd == inst) {
 			visual = "";
@@ -259,8 +238,6 @@
 			document.getElementById("inst4").innerHTML = "";
 			document.getElementById("date4").innerHTML = "";
 		} else {
-			//var trgtDate = new Date(originDate.getTime() - 3362000 +((121531-datRnd)*24*60*60*1000));
-			//var trgtTime = trgtDate.getTime() - originDate.getTime();
 			document.getElementById("dte4").innerHTML = "";//(121531 - datRnd) + visual ;
 			document.getElementById("dat4").innerHTML = "";//datRnd;
 			document.getElementById("inst4").innerHTML = instRnd + visual;//(trgtTime/1000) + 3362;
@@ -269,5 +246,6 @@
 	};
 	
 	</script>
+	
 	<script src='javascripts/javascripts.js'></script>
 </html>
